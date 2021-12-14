@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\calla\source\repos\WeeklyChallengesSet01.cs" Link="WeeklyChallengesSet01.cs" />
+  </ItemGroup>
+
 </Project>
