@@ -122,7 +122,7 @@ namespace ChallengesWithTestsMark8.Tests
 
         [Theory]
         [InlineData(new string[] { "Hello,", "world" }, "Hello, world.")]
-        [InlineData(new string[] { "This", "is", "only", "a", "test" }, "This is only a test.")]
+        [InlineData(new string[] { "This", "is", "only", "a", "test " }, "This is only a test.")]
         [InlineData(new string[] { "This", "is", "", "a", "test" }, "This is a test.")]
         [InlineData(new string[] { "This", "is", " ", "a", "test" }, "This is a test.")]
         [InlineData(new string[] { "This", "is ", "  ", "a  ", " test  " }, "This is a test.")]

@@ -90,17 +90,6 @@ namespace ChallengesWithTestsMark8
 
         public double AverageEvens(int[] numbers)
         {
-            //foreach (var number in numbers)
-            //{
-            //    if (number % 2 == 0)
-            //    {
-            //        return numbers.Average();
-            //    }
-            //    else
-            //    {
-            //        return 0;
-            //    }
-            //}
             double sum = 0;
             double count = 0;
             if (numbers == null)
