@@ -48,24 +48,69 @@ namespace ChallengesWithTestsMark8
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            return str.LastIndexOf("");
+            int index = -1;
+            bool uindex;
+            for (int i = 0; i < str.Length; i++)
+            {
+                uindex = true;
+                for (int j = 0; j < str.Length; j++)
+                {
+                    if (str[i] == str[j] && i != j)
+                    {
+                        uindex = false;
+                    }
+                }
+                if (uindex == true)
+                {
+                    index = i;
+                }
+            }
+            return index;
         }
 
         public int MaxConsecutiveCount(int[] numbers)
         {
-            throw new NotImplementedException();
+            int count = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                int currentCount = 1;
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    if (numbers[i] != numbers[j])
+                    {
+                        break;
+                    }
+                    currentCount++;
+                }
+                if(currentCount > count)
+                {
+                    count = currentCount;
+                } 
+            }
+            return count;           
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
-            //List<double> result = new List<double>();
-            //for (int i = (n - 1); i < List.Count; i += n)
-            //{
-            //    result.Add(List[i]);
-            //}
-
-            //return result;
-            throw new NotImplementedException();
+            var nthElement = new List<double>();
+            var nullCheck = new double[] { };
+            if(elements == null)
+            {
+                return nullCheck;
+            }
+            for (int i = 0; i < elements.Count; i++)
+            {
+                if (elements[i] % n == 0)
+                {
+                    nthElement.Add(elements[i]);
+                }
+                if (n < 0 || n > elements.Count)
+                {
+                    nthElement.Clear();
+                }
+            }
+            double[] finalArray = nthElement.ToArray();
+            return finalArray;
         }
     }
 }
